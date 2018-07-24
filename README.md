@@ -59,11 +59,11 @@ getAll()
 Method Signature:
 
 ```js
-update(book, shelf)
+update(book, group)
 ```
 
 * book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
+* group: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
 * Returns a Promise which resolves to a JSON object containing the response data of the POST request
 
 ### `search`
@@ -76,7 +76,7 @@ search(query)
 
 * query: `<String>`
 * Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
+* These books do not know which group they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
 
 ## Important
 The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
