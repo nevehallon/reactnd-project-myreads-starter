@@ -8,6 +8,8 @@ class BookList extends Component {
       switchGroup: PropTypes.func.isRequired
     }
 
+    state = { groupSwitch: false }
+
 
     render() {
         const { books, switchGroup } = this.props
@@ -25,7 +27,7 @@ class BookList extends Component {
             const groupie = books.filter( book => book.group === group.type)
             return (
                 <div className='group' key={i}>
-                <h2 className='group-name'>{group.name}</h2>
+                <h2 className='group-name'>{ group.name }</h2>
                 <div className='group-books'>
 
                 <Fishelf

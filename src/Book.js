@@ -29,7 +29,7 @@ class Book extends Component {
                 <GroupSwitcher
                   book={ book }
                   books={ books }
-                  switchGroup={switchGroup }
+                  switchGroup={ switchGroup }
                 />
               </div>
               <div className="book-title">{ title }</div>

@@ -6,21 +6,35 @@ import './App.css'
 import Search from './Search'
 
 class BooksApp extends React.Component {
-  state = { books: [] }
+  state = { books: [],
+    isLoading: false
+   }
 
     componentDidMount() {
-  
+
+      this.startLoading();
       // get books on load
-      BooksAPI.getAll().then((books) => {
-        this.setState({books})
+      BooksAPI.getAll()
+      .then((books) => {this.setState({ books })
       })
+      .catch(() => { alert('Something went wrong with your request.'); })
+      .then(this.endLoading);
   }
 
-  switchGroup = ( newBook, newShelf ) => {
-    BooksAPI.update(newBook, newShelf).then(response =>{
+  startLoading = () => {
+    this.setState({ isLoading: true });
+  };
+
+  endLoading = () => {
+    this.setState({ isLoading: false });
+  };
+
+
+  switchGroup = ( newBook, newGroup ) => {
+    BooksAPI.update(newBook, newGroup).then(response =>{
 
       // set group for new or updated book
-      newBook.shelf = newShelf
+      newBook.group = newGroup
 
       // get list of books without updated or new book
       let updatedBooks = this.state.books.filter( book => book.id !== newBook.id )
