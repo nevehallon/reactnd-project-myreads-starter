@@ -34,7 +34,7 @@ class BooksApp extends React.Component {
     BooksAPI.update(newBook, newGroup).then(response =>{
 
       // set group for new or updated book
-      newBook.group = newGroup
+      newBook.shelf = newGroup
 
       // get list of books without updated or new book
       let updatedBooks = this.state.books.filter( book => book.id !== newBook.id )

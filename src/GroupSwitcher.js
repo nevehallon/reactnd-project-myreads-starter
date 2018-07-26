@@ -17,7 +17,7 @@ class GroupSwitcher extends Component {
     // if book is in current list, set current group to book.group
     for (let item of books ) {
       if (item.id === book.id)  {
-        currentGroup = item.group
+        currentGroup = item.shelf
         break
       }
     }

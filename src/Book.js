@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types'
 import GroupSwitcher from './GroupSwitcher'
 import noCover from './icons/no-cover-image.png'
 
-class Book extends Component {
+class Book extends PureComponent {
 
   static propTypes = {
     book: PropTypes.object.isRequired,

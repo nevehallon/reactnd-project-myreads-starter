@@ -23,11 +23,11 @@ class BookList extends Component {
         return (
 
         <div className='book-list-content'>
-        {groupTypes.map((group, i) => {
-            const groupie = books.filter( book => book.group === group.type)
+        {groupTypes.map((shelf, i) => {
+            const groupie = books.filter( book => book.shelf === shelf.type)
             return (
                 <div className='group' key={i}>
-                <h2 className='group-name'>{ group.name }</h2>
+                <h2 className='group-name'>{ shelf.name }</h2>
                 <div className='group-books'>
 
                 <Fishelf
