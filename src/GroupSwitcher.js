@@ -26,7 +26,7 @@ class GroupSwitcher extends Component {
       <div className="book-group-changer">
         <select  onChange={(event) => switchGroup(book, event.target.value)}
           defaultValue={ currentGroup }>
-          <option value="none" disabled>Move to...</option>
+          <option disabled>Move to...</option>
           <option value="currentlyReading">Currently Reading</option>
           <option value="wantToRead">Want to Read</option>
           <option value="read">Read</option>
