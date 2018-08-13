@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nevehallon.github.io/reactnd-project-myreads-starter",
+  "homepage": "https://nevehallon.github.io/reactnd-project-myreads-starter/",
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.3.2",
